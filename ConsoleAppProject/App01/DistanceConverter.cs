@@ -18,11 +18,20 @@ namespace ConsoleAppProject.App01
         /// </summary>
         public void Run()
         {
+            OutputHeading();
             InputMiles();
             CalculateFeet();
             OutputFeet();
         }
-        
+
+        private void OutputHeading()
+        {
+            Console.WriteLine("\n----------------------------------");
+            Console.WriteLine("      Convert Miles to Feet       ");
+            Console.WriteLine("          by Daniel Hale          ");
+            Console.WriteLine("----------------------------------\n");
+        }
+
         /// <summary>
         /// Allows the user to enter the distance in miles as a double.
         /// </summary>

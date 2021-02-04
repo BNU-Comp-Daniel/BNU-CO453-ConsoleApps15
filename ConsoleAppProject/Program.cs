@@ -22,13 +22,6 @@ namespace ConsoleAppProject
             Console.Beep();
 
             
-                Console.WriteLine();
-                Console.WriteLine("----------------------------------");
-                Console.WriteLine("      Convert Miles to Feet       ");
-                Console.WriteLine("          by Daniel Hale          ");
-                Console.WriteLine("----------------------------------");
-                Console.WriteLine();
-
             DistanceConverter converter = new DistanceConverter();
             converter.Run();
         }
