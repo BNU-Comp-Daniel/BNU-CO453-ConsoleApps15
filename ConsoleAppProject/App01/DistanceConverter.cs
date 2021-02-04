@@ -38,15 +38,15 @@ namespace ConsoleAppProject.App01
         /// </summary>
         private void CalculateFeet()
         {
-
+            feet = miles * 5280;
         }
 
         /// <summary>
-        /// Allows the program to give the output in feet as a double.
+        /// Allows the program to give the output of the miles converted into feet as a double.
         /// </summary>
         private void OutputFeet()
         {
-
+            Console.WriteLine(miles + " miles is " + feet + " feet!");
         }
     }
 }
