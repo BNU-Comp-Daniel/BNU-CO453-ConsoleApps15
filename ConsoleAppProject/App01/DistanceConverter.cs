@@ -26,6 +26,8 @@ namespace ConsoleAppProject.App01
         public void MilesToFeet()
         {
             OutputHeading();
+            Console.WriteLine("Converting Miles to Feet");
+            Console.WriteLine();
             InputMiles();
             CalculateFeet();
             OutputFeet();
@@ -34,6 +36,8 @@ namespace ConsoleAppProject.App01
        public void FeetToMiles()
        {
             OutputHeading();
+            Console.WriteLine("Converting Feet to Miles");
+            Console.WriteLine();
             InputFeet();
             CalculateMiles();
             OutputMiles();
@@ -42,6 +46,8 @@ namespace ConsoleAppProject.App01
        public void MilesToMetres()
        {
             OutputHeading();
+            Console.WriteLine("Converting Miles to Metres");
+            Console.WriteLine();
             InputMiles();
             CalculateMetres();
             OutputMetres();
@@ -50,7 +56,7 @@ namespace ConsoleAppProject.App01
         private void OutputHeading()
         {
             Console.WriteLine("\n----------------------------------");
-            Console.WriteLine("      Convert Miles to Feet       ");
+            Console.WriteLine("      Distance Converter App       ");
             Console.WriteLine("          by Daniel Hale          ");
             Console.WriteLine("----------------------------------\n");
         }
