@@ -118,7 +118,7 @@ namespace ConsoleAppProject.App01
         }
 
         /// <summary>
-        /// Allows the program to give the output of the miles converted into feet as a double.
+        /// Allows the program to give the output of the feet converted into miles as a double.
         /// </summary>
         private void OutputMiles()
         {
@@ -126,7 +126,7 @@ namespace ConsoleAppProject.App01
         }
 
         /// <summary>
-        /// Allows the program to give the output of the miles converted into feet as a double.
+        /// Allows the program to give the output of the miles converted into metres as a double.
         /// </summary>
         private void OutputMetres()
         {
