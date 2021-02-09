@@ -27,7 +27,7 @@ namespace ConsoleAppProject.App01
         {
             OutputHeading("Converting Miles to Feet");
 
-            InputMiles();
+            miles = InputDistance("Please enter the number of miles > ");
             CalculateFeet();
             OutputFeet();
         }
@@ -36,7 +36,7 @@ namespace ConsoleAppProject.App01
        {
             OutputHeading("Converting Feet to Miles");
 
-            InputFeet();
+            feet = InputDistance("Please enter the number of feet > ");
             CalculateMiles();
             OutputMiles();
        }
@@ -45,7 +45,7 @@ namespace ConsoleAppProject.App01
        {
             OutputHeading("Converting Miles to Metres");
 
-            InputMiles();
+            miles = InputDistance("Please enter the number of miles > ");
             CalculateMetres();
             OutputMetres();
        }
@@ -64,31 +64,11 @@ namespace ConsoleAppProject.App01
         /// <summary>
         /// Allows the user to enter the distance in miles as a double.
         /// </summary>
-        private void InputMiles()
+        private double InputDistance(string prompt)
         {
-            Console.Write("Please enter the number of miles > ");
+            Console.Write(prompt);
             string value = Console.ReadLine();
-            miles = Convert.ToDouble(value);
-        }
-
-        /// <summary>
-        /// Allows the user to enter the distance in feet as a double.
-        /// </summary>
-        private void InputFeet()
-        {
-            Console.Write("Please enter the number of feet > ");
-            string value = Console.ReadLine();
-            feet = Convert.ToDouble(value);
-        }
-
-        /// <summary>
-        /// Allows the user to enter the distance in metres as a double.
-        /// </summary>
-        private void InputMetres()
-        {
-            Console.Write("Please enter the number of metres > ");
-            string value = Console.ReadLine();
-            metres = Convert.ToDouble(value);
+            return Convert.ToDouble(value);
         }
 
         /// <summary>
