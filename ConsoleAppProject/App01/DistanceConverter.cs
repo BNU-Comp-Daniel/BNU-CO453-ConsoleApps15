@@ -37,23 +37,39 @@ namespace ConsoleAppProject.App01
         /// </summary>
         public void ConvertDistance()
         {
-            fromUnit = SelectUnit("Please select the from distance unit > ");
-            toUnit = SelectUnit("Please select the to distance unit > ");
+            OutputHeading();
 
-            OutputHeading($"Converting {fromUnit} to {toUnit}");
+            fromUnit = SelectUnit(" Please select the from distance unit > ");
+            toUnit = SelectUnit(" Please select the to distance unit > ");
 
-            fromDistance = InputDistance($"Please enter the number of {fromUnit} > ");
-            
-            //CalculateFeet();
+            Console.WriteLine($"\n converting {fromUnit} to {toUnit}");
+
+            fromDistance = InputDistance($" Please enter the number of {fromUnit} > ");
+
+            CalculateDistance();
             
             OutputDistance();
+        }
+
+        private void CalculateDistance()
+        {
+            if(fromUnit == MILES && toUnit == FEET)
+            {
+                toDistance = fromDistance * FEET_IN_MILES;
+            }
+            else if(fromUnit == FEET && toUnit == MILES)
+            {
+                toDistance = fromDistance / FEET_IN_MILES;
+            }
         }
 
         private string SelectUnit(string prompt)
         {
             string choice = DisplayChoices(prompt);
 
-            return ExecuteChoice(choice);
+            string unit = ExecuteChoice(choice);
+            Console.WriteLine($"\n You have chosen {unit}");
+            return unit;
         }
 
         private static string ExecuteChoice(string choice)
@@ -87,15 +103,12 @@ namespace ConsoleAppProject.App01
             return choice;
         }
 
-        private void OutputHeading(String prompt)
+        private void OutputHeading()
         {
             Console.WriteLine("\n----------------------------------");
             Console.WriteLine("      Distance Converter App       ");
             Console.WriteLine("          by Daniel Hale          ");
             Console.WriteLine("----------------------------------\n");
-
-            Console.WriteLine(prompt);
-            Console.WriteLine();
         }
 
         /// <summary>
@@ -113,8 +126,8 @@ namespace ConsoleAppProject.App01
         /// </summary>
         private void OutputDistance()
         {
-            Console.WriteLine($" {fromDistance}  {fromUnit}" +
-                $" is {toDistance}  {toUnit}!");
+            Console.WriteLine($"\n {fromDistance}  {fromUnit}" +
+                $" is {toDistance}  {toUnit}!\n");
         }
     }
 }
