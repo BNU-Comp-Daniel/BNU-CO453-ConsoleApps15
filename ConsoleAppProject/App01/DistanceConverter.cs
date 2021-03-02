@@ -134,6 +134,9 @@ namespace ConsoleAppProject.App01
             return choice;
         }
 
+        /// <summary>
+        /// Allows the program to display this heading.
+        /// </summary>
         private void OutputHeading()
         {
             Console.WriteLine("\n----------------------------------");
