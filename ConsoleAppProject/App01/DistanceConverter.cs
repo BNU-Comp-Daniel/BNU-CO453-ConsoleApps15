@@ -2,10 +2,12 @@
 namespace ConsoleAppProject.App01
 {
     /// <summary>
-    /// Please describe the main features of this App
+    /// The main feature of this application is to be able to select a 
+    /// distance measurement and be ablt to convert that to another distance measurement of the the user's choice
+    /// and get an accurate calculation of the converted measurement.
     /// </summary>
     /// <author>
-    /// Daniel Hale version 0.3
+    /// Daniel Hale version 0.4
     /// </author>
     public class DistanceConverter 
     { 
@@ -37,7 +39,7 @@ namespace ConsoleAppProject.App01
 
 
         /// <summary>
-        /// Allows the user to run the program.
+        /// This allows the user to be able to select the measurements they would like to use in their calculation.
         /// </summary>
         public void ConvertDistance()
         {
@@ -55,6 +57,9 @@ namespace ConsoleAppProject.App01
             OutputDistance();
         }
 
+        /// <summary>
+        /// This allows the program to be able to calculate the measurment convertion to give an accurate output.
+        /// </summary>
         private void CalculateDistance()
         {
             if(fromUnit == MILES && toUnit == FEET)
@@ -83,6 +88,9 @@ namespace ConsoleAppProject.App01
             }
         }
 
+        /// <summary>
+        /// This allows the user to be able to select a distance measurment.
+        /// </summary>
         private string SelectUnit(string prompt)
         {
             string choice = DisplayChoices(prompt);
@@ -110,6 +118,9 @@ namespace ConsoleAppProject.App01
             return null;
         }
 
+        /// <summary>
+        /// This allows the program to display all the choices to the user.
+        /// </summary>
         private static string DisplayChoices(string prompt)
         {
             Console.WriteLine();
@@ -132,7 +143,7 @@ namespace ConsoleAppProject.App01
         }
 
         /// <summary>
-        /// Allows the user to enter the distance in miles as a double.
+        /// Allows the user to enter the number of a distance measurement as a double.
         /// </summary>
         private double InputDistance(string prompt)
         {
