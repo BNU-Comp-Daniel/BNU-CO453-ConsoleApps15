@@ -29,6 +29,10 @@ namespace ConsoleAppProject.App01
         {
             fromUnit = MILES;
             toUnit = FEET;
+            fromUnit = METRES;
+            toUnit = MILES;
+            fromUnit = FEET;
+            toUnit = METRES;
         }
 
 
@@ -60,6 +64,22 @@ namespace ConsoleAppProject.App01
             else if(fromUnit == FEET && toUnit == MILES)
             {
                 toDistance = fromDistance / FEET_IN_MILES;
+            }
+            else if(fromUnit == METRES && toUnit == MILES)
+            {
+                toDistance = fromDistance * METRES_IN_MILES;
+            }
+            else if (fromUnit == MILES && toUnit == METRES)
+            {
+                toDistance = fromDistance / METRES_IN_MILES;
+            }
+            else if (fromUnit == FEET && toUnit == METRES)
+            {
+                toDistance = fromDistance * FEET_IN_METRES;
+            }
+            else if (fromUnit == METRES && toUnit == FEET)
+            {
+                toDistance = fromDistance / FEET_IN_METRES;
             }
         }
 
