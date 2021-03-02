@@ -60,7 +60,7 @@ namespace ConsoleAppProject.App01
         /// <summary>
         /// This allows the program to be able to calculate the measurment convertion to give an accurate output.
         /// </summary>
-        private void CalculateDistance()
+        public void CalculateDistance()
         {
             if(FromUnit == MILES && ToUnit == FEET)
             {
@@ -91,7 +91,7 @@ namespace ConsoleAppProject.App01
         /// <summary>
         /// This allows the user to be able to select a distance measurment.
         /// </summary>
-        private string SelectUnit(string prompt)
+        public string SelectUnit(string prompt)
         {
             string choice = DisplayChoices(prompt);
 
@@ -100,7 +100,7 @@ namespace ConsoleAppProject.App01
             return unit;
         }
 
-        private static string ExecuteChoice(string choice)
+        public static string ExecuteChoice(string choice)
         {
             if (choice.Equals("1"))
             {
@@ -121,7 +121,7 @@ namespace ConsoleAppProject.App01
         /// <summary>
         /// This allows the program to display all the choices to the user.
         /// </summary>
-        private static string DisplayChoices(string prompt)
+        public static string DisplayChoices(string prompt)
         {
             Console.WriteLine();
             Console.WriteLine($" 1. {FEET}");
@@ -137,7 +137,7 @@ namespace ConsoleAppProject.App01
         /// <summary>
         /// Allows the program to display this heading.
         /// </summary>
-        private void OutputHeading()
+        public void OutputHeading()
         {
             Console.WriteLine("\n----------------------------------");
             Console.WriteLine("      Distance Converter App       ");
@@ -148,7 +148,7 @@ namespace ConsoleAppProject.App01
         /// <summary>
         /// Allows the user to enter the number of a distance measurement as a double.
         /// </summary>
-        private double InputDistance(string prompt)
+        public double InputDistance(string prompt)
         {
             Console.Write(prompt);
             string value = Console.ReadLine();
@@ -158,7 +158,7 @@ namespace ConsoleAppProject.App01
         /// <summary>
         /// Allows the program to give the output as a double.
         /// </summary>
-        private void OutputDistance()
+        public void OutputDistance()
         {
             Console.WriteLine($"\n {FromDistance}  {FromUnit}" +
                 $" is {ToDistance}  {ToUnit}!\n");
