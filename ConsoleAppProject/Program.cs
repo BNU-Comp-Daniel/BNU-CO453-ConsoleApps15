@@ -29,6 +29,9 @@ namespace ConsoleAppProject
             BMI Calculator = new BMI();
             Calculator.OutputUnit();
             Calculator.GetUnit();
+            Calculator.GetWeight();
+            Calculator.GetHeight();
+            Calculator.CalculateBMI();
             Calculator.OutputResult();
         }
     }
