@@ -43,7 +43,6 @@ namespace ConsoleAppProject.App01
         /// </summary>
         public void ConvertDistance()
         {
-            OutputHeading();
 
             FromUnit = SelectUnit(" Please select the from distance unit > ");
             ToUnit = SelectUnit(" Please select the to distance unit > ");
@@ -132,17 +131,6 @@ namespace ConsoleAppProject.App01
             Console.WriteLine(prompt);
             string choice = Console.ReadLine();
             return choice;
-        }
-
-        /// <summary>
-        /// Allows the program to display this heading.
-        /// </summary>
-        public void OutputHeading()
-        {
-            Console.WriteLine("\n----------------------------------");
-            Console.WriteLine("      Distance Converter App       ");
-            Console.WriteLine("          by Daniel Hale          ");
-            Console.WriteLine("----------------------------------\n");
         }
 
         /// <summary>
