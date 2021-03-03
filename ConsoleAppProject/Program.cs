@@ -24,7 +24,7 @@ namespace ConsoleAppProject
             Console.Beep();
 
             ConsoleHelper.OutputHeading("\tBMI Calculator\n\tDaniel Hale");
-            ConsoleHelper.OutputIntroduction("Insert BMI introduction here");
+            ConsoleHelper.OutputIntroduction("Thank you for using my BMI calculator. Please select either Metric or Imperial and type in your measurements.");
 
             BMI Calculator = new BMI();
             Calculator.OutputUnit();

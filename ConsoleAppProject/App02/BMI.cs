@@ -44,7 +44,8 @@ namespace ConsoleAppProject.App02
                 Console.WriteLine("Please enter the weight in Stones: ");
                 Console.WriteLine("Please enter the weight in Pounds: ");
             }
-            return Convert.ToDouble(Console.ReadLine());
+            weight = Convert.ToDouble(Console.ReadLine());
+            return weight;
         }
 
         public double GetHeight()
@@ -58,14 +59,19 @@ namespace ConsoleAppProject.App02
                 Console.WriteLine("Please enter the weight in Feet: ");
                 Console.WriteLine("Please enter the weight in Inches: ");
             }
-            return Convert.ToDouble(Console.ReadLine());
+            height = Convert.ToDouble(Console.ReadLine());
+            return height;
         }
 
         public void CalculateBMI()
         {
             if(SelectedUnit == METRIC)
             {
-                bmiResult = weight / (height * height);
+                bmiResult = (weight / height / height) * 10000;
+            }
+            else if(SelectedUnit == IMPERIAL)
+            {
+                bmiResult = (weight / (height * height)) * 703;
             }
         }
 
