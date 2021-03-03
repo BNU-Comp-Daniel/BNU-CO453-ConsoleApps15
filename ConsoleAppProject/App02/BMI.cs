@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace ConsoleAppProject.App02
 {
     /// <summary>
@@ -10,24 +9,28 @@ namespace ConsoleAppProject.App02
     /// </author>
     public class BMI
     {
-        public const string METRIC = "Metric";
-        public const string IMPERIAL = "Imperial";
+        public const string METRIC = "METRIC";
+        public const string IMPERIAL = "IMPERIAL";
 
         public string SelectedUnit;
+
+        public string[] MenuChoices = { METRIC, IMPERIAL };
         
         public void OutputUnit()
         {
             Console.WriteLine("Please choose between: ");
-            Console.WriteLine("1. " + METRIC);
-            Console.WriteLine("2. " + IMPERIAL);
-
-            string input = Console.ReadLine().ToUpper();
+            ConsoleHelper.OutputMenu(MenuChoices);
         }
 
         public string GetUnit()
         {
             SelectedUnit = Console.ReadLine().ToUpper();
             return SelectedUnit;
+        }
+
+        public void OutputResult()
+        {
+            Console.WriteLine(SelectedUnit);
         }
     }
 }

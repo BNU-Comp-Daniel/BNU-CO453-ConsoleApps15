@@ -23,11 +23,13 @@ namespace ConsoleAppProject
             Console.WriteLine();
             Console.Beep();
 
-            ConsoleHelper.OutputHeading("\tDistance Converter\n\tDaniel Hale");
+            ConsoleHelper.OutputHeading("\tBMI Calculator\n\tDaniel Hale");
+            ConsoleHelper.OutputIntroduction("Insert BMI introduction here");
 
-            
-            DistanceConverter converter = new DistanceConverter();
-            converter.ConvertDistance();
+            BMI Calculator = new BMI();
+            Calculator.OutputUnit();
+            Calculator.GetUnit();
+            Calculator.OutputResult();
         }
     }
 }
