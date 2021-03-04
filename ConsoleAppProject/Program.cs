@@ -22,6 +22,8 @@ namespace ConsoleAppProject
             ConsoleHelper.OutputHeading("BNU CO453 Applications Programming 2020-2021!");
             Console.WriteLine();
             Console.Beep();
+            DistanceConverter converter = new DistanceConverter();
+            converter.ConvertDistance();
 
             ConsoleHelper.OutputHeading("\tBMI Calculator\n\tDaniel Hale");
             ConsoleHelper.OutputIntroduction("Thank you for using my BMI calculator. Please select either Metric or Imperial and type in your measurements.");
