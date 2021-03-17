@@ -21,12 +21,13 @@ namespace ConsoleAppProject.App03
         public StudentGrades()
         {
             Students = new string[]
-                    (
-                "Daniel", "Dylan", "Eric",
-                "Georgia", "Hasan", "Hamza",
-                "Jack", "Liam", "Shan",
-                "Shamial"
-                    );
+            {
+                "Daniel", "Josh", "John",
+                "Kimberly", "Sophie", "Bob",
+                "Skye", "Alex", "Robert",
+                "George"
+            };
+
             GradeProfile = new int[(int)Grades.A + 1];
             Marks = new int[Students.Length];
         }
