@@ -47,7 +47,7 @@ namespace ConsoleAppProject.App03
        /// <summary>
        /// Enter in the marks of the students.
        /// </summary>
-        public void InputMarks()
+        public double InputMarks(int mark)
         {
             throw new NotImplementedException();
         }
@@ -61,7 +61,7 @@ namespace ConsoleAppProject.App03
         }
 
         /// <summary>
-        /// Convert the marks to a grade.
+        /// Convert the marks to a letter grade.
         /// </summary>
         public Grades ConvertToGrade(int mark)
         {
@@ -122,6 +122,8 @@ namespace ConsoleAppProject.App03
 
         public void OutputGradeProfile()
         {
+            CalculateGradeProfile();
+
             Grades grade = Grades.X;
             Console.WriteLine();
             

@@ -39,9 +39,6 @@ namespace ConsoleAppProject
 
             ConsoleHelper.OutputHeading("\tStudent Grades\n\tDaniel Hale");
             ConsoleHelper.OutputIntroduction("Thank you for using my Student Grades app.");
-
-            StudentGrades grades = new StudentGrades();
-            grades.InputMarks();
         }
     }
 }
