@@ -18,6 +18,9 @@ namespace ConsoleAppProject.App03
 
         public int Maximum { get; set; }
 
+        /// <summary>
+        /// This constructor sets up the array of students.
+        /// </summary>
         public StudentGrades()
         {
             Students = new string[]
