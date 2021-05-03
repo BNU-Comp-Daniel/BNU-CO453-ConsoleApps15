@@ -1,6 +1,7 @@
 ﻿using ConsoleAppProject.App01;
 using ConsoleAppProject.App02;
 using ConsoleAppProject.App03;
+using ConsoleAppProject.App04;
 using System;
 using System.Runtime;
 
@@ -16,6 +17,8 @@ namespace ConsoleAppProject
     /// </summary>
     public static class Program
     {
+        private static NetworkApp app04 = new NetworkApp();
+
         public static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -39,6 +42,8 @@ namespace ConsoleAppProject
 
             ConsoleHelper.OutputHeading("\tStudent Grades\n\tDaniel Hale");
             ConsoleHelper.OutputIntroduction("Thank you for using my Student Grades app.");
+
+
         }
     }
 }
