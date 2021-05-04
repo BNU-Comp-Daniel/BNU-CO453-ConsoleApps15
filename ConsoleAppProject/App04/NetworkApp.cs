@@ -11,7 +11,9 @@ namespace ConsoleAppProject.App04
         public void DisplayMenu()
         {
             ConsoleHelper.OutputHeading("    Daniel's News Feed");
-
+            DateTime dateTime = DateTime.Now;
+            Console.WriteLine(dateTime.ToLongDateString());
+            Console.WriteLine(dateTime.ToLongTimeString());
             String[] choices = new string[]
             {
                 "Post Message", "Post Image", "" +
