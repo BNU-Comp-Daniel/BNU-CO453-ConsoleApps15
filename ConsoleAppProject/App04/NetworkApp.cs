@@ -6,7 +6,7 @@ namespace ConsoleAppProject.App04
     {
         private NewsFeed news = new NewsFeed();
 
-        private int PostCount = 0;
+        private int PostCount = 2;
 
         public void DisplayMenu()
         {
@@ -17,7 +17,7 @@ namespace ConsoleAppProject.App04
             String[] choices = new string[]
             {
                 "Post Message", "Post Image", "" +
-                "Display All Posts", "Quit"
+                "Display All Posts", "Delete Message", "Quit"
             };
 
             bool wantToQuit = false;
@@ -47,7 +47,7 @@ namespace ConsoleAppProject.App04
             string filename = Console.ReadLine();
             Console.WriteLine("Enter caption: ");
             string caption = Console.ReadLine();
-            PhotoPost post = new PhotoPost(news.GetAuthor(), filename, caption);
+            PhotoPost post = new PhotoPost(news.GetAuthor(), filename, caption, PostCount);
             news.AddPhotoPost(post);
         }
 

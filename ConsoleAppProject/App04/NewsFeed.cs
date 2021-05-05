@@ -35,6 +35,7 @@ namespace ConsoleAppProject.App04
             AddMessagePost(post);
 
             PhotoPost photoPost = new PhotoPost(AUTHOR, "Photo1.jpg", "Visual Studio 2019", 2);
+            AddPhotoPost(photoPost);
         }
 
 
