@@ -9,18 +9,23 @@ namespace ConsoleAppProject.App04
 
         private readonly List<String> comments;
 
+        public int PostId;
+
 
         // username of the post's author
         public String Username { get; }
 
         public DateTime Timestamp { get; }
 
-        public Post(string author)
+        public Post(string author, int id)
         {
             this.Username = author;
+            Timestamp = DateTime.Now;
 
             likes = 0;
             comments = new List<String>();
+
+            PostId = id;
         }
 
 

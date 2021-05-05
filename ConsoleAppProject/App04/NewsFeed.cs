@@ -30,6 +30,11 @@ namespace ConsoleAppProject.App04
         public NewsFeed()
         {
             posts = new List<Post>();
+
+            MessagePost post = new MessagePost(AUTHOR, "I love Visual Studio 2019", 1);
+            AddMessagePost(post);
+
+            PhotoPost photoPost = new PhotoPost(AUTHOR, "Photo1.jpg", "Visual Studio 2019", 2);
         }
 
 
@@ -51,6 +56,24 @@ namespace ConsoleAppProject.App04
         public void AddPhotoPost(PhotoPost photo)
         {
             posts.Add(photo);
+        }
+
+        public void RemovePost(int id)
+        {
+            Post post = FindPost(id);
+            posts.Remove(post);
+        }
+
+        public Post FindPost(int id)
+        {
+            foreach(MessagePost post in posts)
+            {
+                if (id == post.PostId)
+                {
+                    return post;
+                }
+            }
+            return null;
         }
 
         ///<summary>
